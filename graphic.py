@@ -4,12 +4,12 @@ import pandas as pd
 import csv
 from datetime import datetime
 
-min_diff_time = -2 # minimum d'heure entre les deux données comparées enregistré dans la data
-max_diff_time = -4
-diff_with_last_date_to_median = 50 # 100 = 1 hour / maximum d'heures de différence avec les autres données pour calculer une moyenne ou injecter en tant que nouvelle donnée
-max_diff_time_to_median = 0.1 # maximum de différence entre les différences de temps de comparaison pour calculer une moyenne
-min_diff_time_to_median = -0.1
-min_diff_to_new_value = 200  # 100 = 1 hour / maximum d'heures de différence avec les autres données pour injecter en tant que nouvelle donnée
+min_diff_time = -20 # minimum d'heure entre les deux données comparées enregistré dans la data
+max_diff_time = -28
+diff_with_last_date_to_median = 500 # 100 = 1 hour / maximum d'heures de différence avec les autres données pour calculer une moyenne ou injecter en tant que nouvelle donnée
+max_diff_time_to_median = 4 # maximum de différence entre les différences de temps de comparaison pour calculer une moyenne
+min_diff_time_to_median = -4
+min_diff_to_new_value = 2000  # 100 = 1 hour / maximum d'heures de différence avec les autres données pour injecter en tant que nouvelle donnée
 min_date = 202104031601 # date minimun pour le graphic
 
 """
@@ -35,7 +35,7 @@ min_date : sont retenu que les données après le 01-04-2021 à 16h01
 """
 # SELECT FILE
 
-data = './data/social-evolution/evolution-09-04-2021-16:10.csv'
+data = './data/social-evolution/evolution-09-04-2021-19:28.csv'
 
 names = ['crypto', 'prix', 'prix avant', 'difference prix', 'nb read', 'good word', 'bad word', 'comments', 'date', 'difference temps']
 dataset = []

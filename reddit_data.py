@@ -161,9 +161,10 @@ while 10:
         t = strings.split(',')
         a = [int(x) for x in t]
         dateStr = ''
+        print(a)
         for nb in a:
-            if len(nb) < 2:
-                nb = "0"+nb
+            if len(str(nb)) < 2:
+                nb = "0"+str(nb)
             dateStr+=str(nb)
         return str(dateStr)
     
